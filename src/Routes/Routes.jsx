@@ -1,0 +1,22 @@
+// src/AppRoutes.tsx
+
+import { Routes, Route } from "react-router-dom";
+import Home from "../Home/Home";
+import About from "../About/About";
+import Subscription from "../Subscription/Subscription";
+import Contact from "../Contact/Contact";
+import Menu from "../Menu/Menu";
+import Blog from "../Blog/Blog";
+
+export default function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/subscription" element={<Subscription />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/blog" element={<Blog />} />
+    </Routes>
+  );
+}
