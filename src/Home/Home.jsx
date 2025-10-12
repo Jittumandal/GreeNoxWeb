@@ -1,5 +1,5 @@
 import Slider from "../components/Slider.jsx";
-import Tabs from "../Components/tabs.jsx";
+import Tabs from "../components/tabs.jsx";
 
 const Home = () => {
   return (
