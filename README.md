@@ -1,6 +1,6 @@
 # GreeNox
 
-A responsive fitness and healthy food web app built with **Vite**, **React**, and **Tailwind CSS**, inspired by cult.fit’s sleek aesthetic and engaging UX.
+A responsive fitness and healthy food web app built with **Vite**, **React**, and **Tailwind CSS**, inspired by GreeNox sleek aesthetic and engaging UX.
 
 ---
 
