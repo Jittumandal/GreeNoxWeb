@@ -16,3 +16,35 @@ body {
 .slider_bg-color {
     background-color: #F7F7F7;
 }
+
+.bggreen {
+    background-color: #48A470;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 0px;
+    border-bottom-right-radius: 50px;
+    width: 60%;
+}
+
+.order_now {
+    background-color: #48A470;
+    border-radius: 3px;
+}
+
+.know_more {
+    border-radius: 3px;
+}
+
+.weekly {
+    background-color: #CCE9D9;
+    border-radius: 50%;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+}
+
+.nthchild:nth-child(2) .weekly {
+    background-color: #FFE0E0;
+}

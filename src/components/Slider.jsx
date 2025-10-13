@@ -9,7 +9,7 @@ const slides = [
     img: "/img/slider-1.png",
     user: {
       name: "Jitendra Mandal",
-      avatar: "/img/user.png",
+      avatar: "/img/profile.svg",
       rating: "4.5 ♥",
       likes: "1k+ Likes",
     },
@@ -44,15 +44,13 @@ export default function Slider() {
       <div className="mx-auto flex w-full flex-col items-center gap-8 pl-12 md:flex-row">
         {/* Left Content */}
         <div className="flex-1 pl-0 text-left md:pl-[100px]">
-          <h3 className="mb-2 pb-4 text-3xl font-semibold text-orange-500">
-            CHEF'S SPECIAL
-          </h3>
+          <h3 className="mb-2 pb-4 text-3xl text-orange-500">CHEF'S SPECIAL</h3>
           <h1 className="mb-4 text-4xl font-bold leading-normal text-gray-900 md:text-5xl md:leading-[70px]">
             {slide.title}
             <br />
             {slide.subtitle}
           </h1>
-          <p className="mb-6 whitespace-pre-line pt-4 text-gray-600">
+          <p className="fw-normal mb-6 whitespace-pre-line pt-4 text-gray-600">
             {slide.description}
           </p>
           <form className="mb-8 flex items-center">
@@ -63,7 +61,7 @@ export default function Slider() {
             />
             <button
               type="submit"
-              className="rounded-r-full border bg-orange-400 px-6 py-4 font-semibold text-white transition hover:bg-orange-500"
+              className="rounded-r-full border bg-orange-400 px-6 py-4 text-white transition hover:bg-orange-500"
             >
               GET START NOW
             </button>
@@ -112,26 +110,41 @@ export default function Slider() {
           />
           {/* Delivery Badge */}
           <div className="absolute left-4 top-4 flex items-center gap-2 rounded-lg bg-green-100 px-3 py-2 text-green-700 shadow">
-            <span className="text-xl">🚚</span>
+            <span className="text-xl">
+              <img src="/img/delivery.svg" alt="delivery" />
+            </span>
             <span className="text-sm font-semibold">Delivery In 30 Min</span>
           </div>
           {/* Location Badge */}
-          <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-lg bg-yellow-100 px-3 py-2 text-yellow-700 shadow">
-            <span className="text-xl">📍</span>
-            <span className="text-sm font-semibold">
-              Location at destination
+          <div className="boarder boarder border-orange absolute bottom-4 right-4 flex items-center gap-2 rounded-lg bg-white px-3 py-3 text-green-700 shadow">
+            <span className="text-xl">
+              <img src="/img/location.svg" alt="location" />
+            </span>
+            <span className="fs-bold ms-2 text-lg font-semibold">
+              Location
+              <br />
+              <span className="text-sm font-semibold">at destination</span>
             </span>
           </div>
           {/* User Badge */}
-          <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-lg bg-white px-3 py-2 shadow">
+          <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-lg bg-white px-6 py-4 shadow">
             <img
               src={slide.user.avatar}
               alt="User"
               className="h-6 w-6 rounded-full"
             />
-            <span className="text-sm font-semibold">{slide.user.name}</span>
-            <span className="text-xs text-pink-500">{slide.user.rating}</span>
-            <span className="text-xs text-gray-500">{slide.user.likes}</span>
+            <span className="text-sm font-semibold">
+              {slide.user.name}
+              <br />
+              <span className="">
+                <span className="text-xs text-pink-500">
+                  {slide.user.rating}
+                </span>
+                <span className="text-xs text-gray-500">
+                  {slide.user.likes}
+                </span>
+              </span>
+            </span>
           </div>
         </div>
       </div>
