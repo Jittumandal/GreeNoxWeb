@@ -48,3 +48,7 @@ body {
 .nthchild:nth-child(2) .weekly {
     background-color: #FFE0E0;
 }
+
+.freshmealplan {
+    background-color: #F3F6F4;
+}
