@@ -52,3 +52,25 @@ body {
 .freshmealplan {
     background-color: #F3F6F4;
 }
+
+.MONTHS {
+    width: 100px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.amount {
+    width: 100px !important;
+    display: grid;
+}
+
+.selectLoc {
+    margin-right: -12px;
+    background-color: #fff;
+    padding-right: 10px;
+}
+
+.top_40px {
+    margin-top: 160px;
+    left: 0px;
+}
