@@ -16,6 +16,27 @@ const cityLocations = {
       dinein: "OPEN",
       delivery: "OPEN",
     },
+    {
+      address:
+        "BG-02, HUDCO Place, Ansal Plaza Khel Gaon Road New Delhi- 110049",
+      phone: "9711882104",
+      dinein: "OPEN",
+      delivery: "OPEN",
+    },
+    {
+      address:
+        "47, Basant Lok, Community Centre, Vasant Vihar, New Delhi-110057",
+      phone: "9899795811",
+      dinein: "OPEN",
+      delivery: "OPEN",
+    },
+    {
+      address:
+        "47, Basant Lok, Community Centre, Vasant Vihar, New Delhi-110057",
+      phone: "9899795811",
+      dinein: "OPEN",
+      delivery: "OPEN",
+    },
   ],
   Delhi: [
     {
