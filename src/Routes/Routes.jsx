@@ -7,6 +7,7 @@ import Subscription from "../Subscription/Subscription";
 import Contact from "../Contact/Contact";
 import Menu from "../Menu/Menu";
 import Blog from "../Blog/Blog";
+import Subcriptiondestails from "../pages/Subcriptiondestails";
 
 export default function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function AppRoutes() {
       <Route path="/subscription" element={<Subscription />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/subcriptiondestails" element={<Subcriptiondestails />} />
     </Routes>
   );
 }

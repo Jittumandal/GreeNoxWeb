@@ -98,21 +98,12 @@ export default function Tabs() {
                 onClick={() => setActiveTab(idx)}
                 className={`relative pb-2 text-lg transition ${
                   activeTab === idx
-                    ? "text-green-600"
-                    : "text-gray-700 hover:text-green-500"
+                    ? "border-b-2 border-green-500 text-green-600"
+                    : "border-b-2 border-transparent text-gray-700 hover:text-green-500"
                 }`}
                 style={{ minWidth: "120px" }}
               >
                 {tab.label}
-                {activeTab === idx && (
-                  <span className="absolute -bottom-4 left-1/2 -translate-x-1/2">
-                    <img
-                      src="/img/arrow_down.svg"
-                      alt="Arrow Down"
-                      className="h-6 w-6"
-                    />
-                  </span>
-                )}
               </button>
             ))}
           </div>

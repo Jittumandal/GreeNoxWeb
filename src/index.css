@@ -74,3 +74,9 @@ body {
     margin-top: 160px;
     left: 0px;
 }
+
+.subcriptionplan_bg {
+    background: url('/img/plan_bg.svg');
+    background-repeat: no-repeat;
+
+}
