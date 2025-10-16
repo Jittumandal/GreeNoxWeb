@@ -86,7 +86,7 @@ export default function Tabs() {
   } = tabData[activeTab].content;
 
   return (
-    <section className="w-full bg-white py-8">
+    <section className="w-full bg-white py-8" id="target-section">
       <div className="mx-auto flex max-w-screen-xl flex-col items-center gap-8 px-4 md:flex-row">
         {/* Left: Tabs and Content */}
         <div className="flex-1">

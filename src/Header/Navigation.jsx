@@ -5,7 +5,7 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-gray-200">
+    <header className="fexed absolute left-0 top-0 z-50 w-full border-b border-gray-200 bg-white shadow-sm">
       <div className="mx-auto w-full max-w-screen-xl px-4">
         <nav className="flex items-center justify-between py-2">
           <Link to="/" className="flex items-center gap-2">
