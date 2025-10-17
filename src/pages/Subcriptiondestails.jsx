@@ -14,33 +14,28 @@ const aboutList = [
 const meals = [
   {
     label: "Breakfast",
-    img: "/img/breakfast-meal.jpg",
+    img: "/menuimg/menu15.avif",
   },
   {
     label: "Lunch",
-    img: "/img/lunch-meal.jpg",
+    img: "/menuimg/menu19.avif",
   },
   {
     label: "Dinner",
-    img: "/img/dinner-meal.jpg",
+    img: "/menuimg/menu8.avif",
   },
 ];
 
 export default function Subcriptiondestails() {
   return (
-    <div className="min-h-screen bg-[#fafbfc] px-4 py-8">
-      <div className="mx-auto flex max-w-6xl flex-col overflow-hidden rounded-xl bg-white shadow md:flex-row">
+    <div className="mt-12 min-h-screen bg-[#fafbfc] px-4 py-8 pt-12">
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col overflow-hidden rounded-xl bg-white shadow md:flex-row">
         {/* Left: Images */}
         <div className="flex flex-col gap-4 p-6 md:w-1/3">
           <img
-            src="/img/plan-food-1.jpg"
+            src="/menuimg/herosection2.avif"
             alt="Meal Plan"
-            className="h-48 w-full rounded-lg object-cover"
-          />
-          <img
-            src="/img/plan-food-2.jpg"
-            alt="Meal Plan"
-            className="h-40 w-full rounded-lg object-cover"
+            className="h-100 w-full rounded-lg object-cover"
           />
         </div>
         {/* Right: Details */}
@@ -183,7 +178,7 @@ export default function Subcriptiondestails() {
                   <img
                     src={meal.img}
                     alt={meal.label}
-                    className="h-32 w-full object-cover"
+                    className="h-100 w-full object-cover"
                   />
                   <div className="absolute bottom-2 left-2 flex items-center gap-2 rounded bg-black/60 px-3 py-1 text-white">
                     <svg

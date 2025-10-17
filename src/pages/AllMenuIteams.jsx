@@ -92,6 +92,17 @@ const CATEGORIES = [
   "Fries & Sides",
   "GreeNox® Coffees",
   "McNuggets® & McCrispy™ Strips",
+  "Non-Veg GreeNox",
+  "Veg GreeNox",
+  "Burgers",
+  "Fries & Sides",
+  "GreeNox® Coffees",
+  "McNuggets® & McCrispy™ Strips",
+  "Non-Veg GreeNox",
+  "Veg GreeNox",
+  "Burgers",
+  "Fries & Sides",
+  "GreeNox® Coffees",
 ];
 
 export default function AllMenuIteams() {

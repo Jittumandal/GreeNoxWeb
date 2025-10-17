@@ -38,7 +38,7 @@ export default function MegaDropdown({ isOpen, onClose }) {
               {menuItems.slice(0, 12).map((it, i) => (
                 <Link
                   key={i}
-                  to="/menu"
+                  to="/allmenuiteams"
                   onClick={onClose}
                   className="flex items-center gap-3 rounded-md p-2 hover:bg-gray-50"
                 >
@@ -60,7 +60,7 @@ export default function MegaDropdown({ isOpen, onClose }) {
               {menuItems.slice(6, 12).map((it, i) => (
                 <Link
                   key={i}
-                  to="/menu"
+                  to="/allmenuiteams"
                   onClick={onClose}
                   className="group block overflow-hidden rounded-lg bg-gray-50 p-3 hover:shadow-md"
                 >

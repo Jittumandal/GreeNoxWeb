@@ -78,6 +78,7 @@ body {
 .subcriptionplan_bg {
     background: url('/img/plan_bg.svg');
     background-repeat: no-repeat;
+    margin-top: 75px;
 
 }
 
