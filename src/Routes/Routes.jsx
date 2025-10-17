@@ -8,6 +8,7 @@ import Contact from "../Contact/Contact";
 import Menu from "../Menu/Menu";
 import Blog from "../Blog/Blog";
 import Subcriptiondestails from "../pages/Subcriptiondestails";
+import AllMenuIteams from "../pages/AllMenuIteams";
 
 export default function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/subcriptiondestails" element={<Subcriptiondestails />} />
+      <Route path="/allmenuiteams" element={<AllMenuIteams />} />
     </Routes>
   );
 }

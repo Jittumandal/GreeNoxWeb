@@ -1,13 +1,38 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import MegaDropdown from "./MegaDropdown";
 
 export default function Navigation() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // mobile
+  const [megaOpen, setMegaOpen] = useState(false); // desktop mega
+  const wrapperRef = useRef(null);
+  const closeTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    function handleOutside(e) {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+        setMegaOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleOutside);
+    return () => document.removeEventListener("mousedown", handleOutside);
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setMegaOpen(true);
+  };
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => setMegaOpen(false), 150);
+  };
 
   return (
-    <header className="fexed absolute left-0 top-0 z-50 w-full border-b border-gray-200 bg-white shadow-sm">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-gray-200 bg-white shadow-sm">
       <div className="mx-auto w-full max-w-screen-xl px-4">
-        <nav className="flex items-center justify-between py-2">
+        <nav className="flex items-center justify-between py-3">
           <Link to="/" className="flex items-center gap-2">
             <img
               src="/img/logo.png"
@@ -15,9 +40,8 @@ export default function Navigation() {
               className="h-20 w-20 object-contain"
             />
           </Link>
-          {/* Desktop Menu */}
+
           <div className="hidden w-full items-center justify-end md:flex">
-            {/* Left: Main Links */}
             <div className="flex items-center gap-8 pr-8">
               <Link
                 to="/"
@@ -25,9 +49,46 @@ export default function Navigation() {
               >
                 Home
               </Link>
-              <Link to="/menu" className="text-gray-700 hover:text-green-500">
-                Menu
-              </Link>
+
+              {/* Menu with Mega Dropdown */}
+              <div
+                className="relative"
+                ref={wrapperRef}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <button
+                  onClick={() => {
+                    if (closeTimeoutRef.current) {
+                      clearTimeout(closeTimeoutRef.current);
+                      closeTimeoutRef.current = null;
+                    }
+                    setMegaOpen((s) => !s);
+                  }}
+                  aria-expanded={megaOpen}
+                  className="flex items-center gap-2 text-gray-700 hover:text-green-500 focus:outline-none"
+                >
+                  Menu
+                  <svg
+                    className={`h-4 w-4 transition-transform ${
+                      megaOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    aria-hidden
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+
+                <MegaDropdown
+                  isOpen={megaOpen}
+                  onClose={() => setMegaOpen(false)}
+                />
+              </div>
+
               <Link
                 to="/subscription"
                 className="text-gray-700 hover:text-green-500"
@@ -47,9 +108,12 @@ export default function Navigation() {
                 Contact
               </Link>
             </div>
-            {/* Right: Actions */}
+
             <div className="flex items-center gap-4">
-              <button className="text-gray-700 hover:text-green-500">
+              <button
+                className="text-gray-700 hover:text-green-500"
+                aria-label="Search"
+              >
                 <svg
                   className="inline h-5 w-5"
                   fill="none"
@@ -73,6 +137,7 @@ export default function Navigation() {
               </Link>
             </div>
           </div>
+
           {/* Mobile Hamburger */}
           <button
             className="text-gray-700 hover:text-green-500 md:hidden"
@@ -94,10 +159,10 @@ export default function Navigation() {
             </svg>
           </button>
         </nav>
+
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="fixed right-0 top-20 z-50 h-full w-3/4 max-w-xs translate-x-0 transform border-l border-gray-200 bg-white shadow-lg transition-transform duration-300 ease-out md:hidden">
-            {/* Main Links */}
+          <div className="fixed right-0 top-16 z-50 h-full w-3/4 max-w-xs translate-x-0 transform border-l border-gray-200 bg-white shadow-lg transition-transform duration-300 ease-out md:hidden">
             <div className="flex flex-col gap-4 px-4 py-4">
               <Link
                 to="/"
@@ -142,8 +207,10 @@ export default function Navigation() {
                 Contact
               </Link>
               <hr className="my-2 border-gray-200" />
-              {/* Actions */}
-              <button className="mb-2 text-gray-700 hover:text-green-500">
+              <button
+                className="mb-2 text-gray-700 hover:text-green-500"
+                aria-label="Search"
+              >
                 <svg
                   className="inline h-5 w-5"
                   fill="none"

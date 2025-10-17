@@ -118,3 +118,8 @@ body {
     border: 1px solid #ffa500 !important;
     height: 55px;
 }
+
+.leftmargin {
+    left: -435px;
+    width: 1200px;
+}
