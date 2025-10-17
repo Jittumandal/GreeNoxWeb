@@ -28,7 +28,7 @@ const tabData = [
         "Classic potato fries, lightly salted and fried to a golden crisp. The perfect side for any meal.",
       serving: "Serving Size: 100g",
       allergen: "Allergen Warning/ Contains: None",
-      img: "/img/Spinach.jpg",
+      img: "/img/Sandwich2.svg",
       features: [
         { icon: "🍽️", label: "Weekly Recipes", desc: "Fresh ideas delivered" },
         { icon: "🎁", label: "Exclusive Offers", desc: "Special discounts" },
@@ -45,7 +45,7 @@ const tabData = [
         "A moist chocolate brownie made with premium cocoa and topped with chocolate chips.",
       serving: "Serving Size: 80g",
       allergen: "Allergen Warning/ Contains: Milk, Eggs, Wheat",
-      img: "/img/Sandwich.jpg",
+      img: "/img/jush.svg",
       features: [
         { icon: "🍽️", label: "Weekly Recipes", desc: "Fresh ideas delivered" },
         { icon: "🎁", label: "Exclusive Offers", desc: "Special discounts" },
@@ -62,7 +62,7 @@ const tabData = [
         "A tangy blend of fresh lemons, sugar, and water served chilled.",
       serving: "Serving Size: 250ml",
       allergen: "Allergen Warning/ Contains: None",
-      img: "/img/Soya.jpg",
+      img: "/img/salad.svg",
       features: [
         { icon: "🍽️", label: "Weekly Recipes", desc: "Fresh ideas delivered" },
         { icon: "🎁", label: "Exclusive Offers", desc: "Special discounts" },
