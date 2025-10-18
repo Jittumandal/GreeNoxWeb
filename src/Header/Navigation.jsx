@@ -101,12 +101,12 @@ export default function Navigation() {
               <Link to="/blog" className="text-gray-700 hover:text-green-500">
                 Blog
               </Link>
-              <Link
+              {/* <Link
                 to="/contact"
                 className="text-gray-700 hover:text-green-500"
               >
                 Contact
-              </Link>
+              </Link> */}
             </div>
 
             <div className="flex items-center gap-4">

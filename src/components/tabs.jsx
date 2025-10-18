@@ -11,7 +11,7 @@ const tabData = [
       serving: "Serving Size: 130g",
       allergen: "Allergen Warning/ Contains:",
       cereal: "Cereal containing gluten, Milk, Soya",
-      img: "/img/burger.svg",
+      img: "/img/burger1.svg",
       features: [
         { icon: "🍽️", label: "Weekly Recipes", desc: "Fresh ideas delivered" },
         { icon: "🎁", label: "Exclusive Offers", desc: "Special discounts" },
@@ -86,7 +86,16 @@ export default function Tabs() {
   } = tabData[activeTab].content;
 
   return (
-    <section className="w-full bg-white py-8" id="target-section">
+    <section
+      className="relative w-full bg-white py-8"
+      id="target-section"
+      style={{
+        backgroundImage: "url('/img/tabg.svg')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "top left",
+      }}
+    >
       <div className="mx-auto flex max-w-screen-xl flex-col items-center gap-8 px-4 md:flex-row">
         {/* Left: Tabs and Content */}
         <div className="flex-1">
