@@ -124,3 +124,8 @@ body {
     left: -525px;
     width: 1200px;
 }
+
+.blog_banner {
+    padding-left: 150px;
+    padding-top: 75px;
+}

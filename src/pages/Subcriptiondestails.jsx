@@ -28,8 +28,16 @@ const meals = [
 
 export default function Subcriptiondestails() {
   return (
-    <div className="mt-12 min-h-screen bg-[#fafbfc] px-4 py-8 pt-12">
-      <div className="mx-auto mt-12 flex max-w-7xl flex-col overflow-hidden rounded-xl bg-white shadow md:flex-row">
+    <div
+      className="mt-12 min-h-screen bg-[#fafbfc] px-4 py-8 pt-12"
+      style={{
+        backgroundImage: "url('img/subscription.svg')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "top center",
+      }}
+    >
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col overflow-hidden md:flex-row">
         {/* Left: Images */}
         <div className="flex flex-col gap-4 p-6 md:w-1/3">
           <img

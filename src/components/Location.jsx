@@ -125,8 +125,8 @@ const Location = () => {
       <div
         className={`relative flex flex-col items-center justify-center p-6 transition-colors duration-300 md:w-2/3 ${
           selectedCity
-            ? "bg-orange-100"
-            : "bg-[url('/img/yellow-bg.png')] bg-cover bg-center"
+            ? "bg-[url('img/subscription2.svg')] bg-cover bg-center"
+            : "bg-[url('img/sssss.svg')] bg-cover bg-center"
         }`}
       >
         {/* Show mascots image only when no city is selected */}

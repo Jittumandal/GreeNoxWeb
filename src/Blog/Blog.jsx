@@ -1,53 +1,44 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import BlogBanner from "./BlogBanner";
 
 const latestStories = [
   {
-    title: "Web Stories – Healthy Indian Snacks For Diabetics",
-    img: "/blog/story1.jpg",
+    title: "All About Whole Grains...and Why You Should Be Eating Them",
+    img: "/blog/proteensalad.jpg",
     author: "By GreeNox Diet",
   },
   {
-    title: "Web Stories – Side Effects Of Overeating Dry Fruits",
-    img: "/blog/story2.jpg",
+    title: "What are the Benefits of Eating Salads?",
+    img: "/blog/proteensalad2.jpg",
     author: "By GreeNox Diet",
   },
   {
     title:
       "Web Stories – Struggling To Lose Weight with PCOS? Here’s Effective Nutrition & Diet Tips",
-    img: "/blog/story3.jpg",
+    img: "/blog/proteensalad3.jpg",
     author: "By GreeNox Diet",
   },
-];
-
-const exploreTags = [
-  { label: "Anabolic", img: "/blog/tag1.png" },
-  { label: "Cholesterol", img: "/blog/tag2.png" },
-  { label: "Diabetes", img: "/blog/tag3.png" },
-  { label: "Diet", img: "/blog/tag4.png" },
-  { label: "Featured", img: "/blog/tag5.png" },
-  { label: "Fight Corona", img: "/blog/tag6.png" },
 ];
 
 const topReads = [
   {
     title: "Height Weight Chart – Ideal Weight for Men and Women",
     desc: "Good health is a prerequisite for happiness. While for adults, a vital for children and quality of life, for children, is essential for proper growth, both physically and mentally.",
-    img: "/blog/top1.jpg",
+    img: "/blog/height.jpg",
     tag: "Weight Loss",
     author: "Dr A Bhowal",
   },
   {
     title: "The Ultimate 7-Day Meal Plan for Intermittent Fasting",
     desc: "Intermittent fasting has gained significant prominence as a powerful method for weight loss and overall health improvement.",
-    img: "/blog/top2.jpg",
+    img: "/blog/ultimate.jpg",
     tag: "Diet Plans",
     author: "Riya Malampy",
   },
   {
     title: "Introduction to Smart Scale",
     desc: "We live in a world that evaluates efficiency, efficacy, and accessibility. Yet a lot of this we somehow forget that health is the greatest virtue.",
-    img: "/blog/top3.jpg",
+    img: "/blog/weightloss.jpg",
     tag: "Weight Loss",
     author: "By Neha",
   },
@@ -56,42 +47,42 @@ const topReads = [
 const recentPosts = [
   {
     title: "Mosambi Juice for Weight Loss? Try it Today!",
-    img: "/blog/recent1.jpg",
+    img: "/blog/blog14.webp",
     author: "By GreeNox Diet",
   },
   {
     title: "Is Poha Good For Weight Loss? Let’s Find out.",
-    img: "/blog/recent2.jpg",
+    img: "/blog/blog15.avif",
     author: "By Rishi Sharma",
   },
   {
     title: "How GreeNox helped a Former National-level Power Lifter Transform",
-    img: "/blog/recent3.jpg",
+    img: "/blog/blog8.avif",
     author: "By GreeNox Transformation",
   },
   {
     title: "How Compound Movements Can Help You Bulk or Gain Muscle",
-    img: "/blog/recent4.jpg",
+    img: "/blog/blog9.avif",
     author: "By Savansana “Shiva” Hantare",
   },
   {
     title: "Why you need to begin your day with a high protein breakfast!",
-    img: "/blog/recent5.jpg",
+    img: "/blog/blog10.avif",
     author: "By GreeNox Diet",
   },
   {
     title: "Cardio Routines: How brisk walking can help lower your body fat",
-    img: "/blog/recent6.jpg",
+    img: "/blog/blog11.avif",
     author: "By GreeNox Diet",
   },
   {
     title: "World Heart Day – 8 Heart Healthy Snacks that You Can Munch On!",
-    img: "/blog/recent7.jpg",
+    img: "/blog/blog12.avif",
     author: "By Riya Malampy",
   },
   {
     title: "World Heart Day – Diet Tips for a Healthy Heart",
-    img: "/blog/recent8.jpg",
+    img: "/blog/blog13.avif",
     author: "By Nandita Thombre",
   },
 ];
@@ -100,28 +91,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-[#f7f7f7]">
       {/* Hero Banner */}
-      <section className="relative flex flex-col items-center justify-between bg-black px-0 py-0 text-white md:flex-row">
-        <div className="flex w-full flex-col justify-center px-8 md:w-1/2">
-          <h1 className="mb-2 text-3xl font-bold">Talk to our Experts Today</h1>
-          <p className="mb-6 text-lg">
-            Let GreeNox coaches and RDs motivate you with strategies that drive
-            results.
-          </p>
-          <Link
-            to="/chat"
-            className="w-fit rounded bg-white px-6 py-2 font-semibold text-black shadow hover:bg-gray-100"
-          >
-            Chat with us
-          </Link>
-        </div>
-        <div className="mt-8 flex w-full items-center justify-center md:mt-0 md:w-1/2">
-          <img
-            src="/blog/Homepage.jpg"
-            alt="Experts"
-            className="h-[600px] w-full object-cover shadow"
-          />
-        </div>
-      </section>
+      <BlogBanner />
 
       {/* Search Bar */}
       <div className="mx-auto max-w-5xl px-4 py-6">
@@ -157,26 +127,6 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Explore Tags */}
-      <section className="mx-auto max-w-5xl px-4 py-6">
-        <h2 className="mb-4 text-xl font-semibold">Explore</h2>
-        <div className="flex gap-6 overflow-x-auto pb-2">
-          {exploreTags.map((tag, idx) => (
-            <div
-              key={idx}
-              className="flex min-w-[100px] max-w-[120px] flex-col items-center rounded-lg bg-white p-3 shadow"
-            >
-              <img
-                src={tag.img}
-                alt={tag.label}
-                className="mb-2 h-12 w-12 object-contain"
-              />
-              <span className="text-xs text-gray-700">{tag.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Top Reads */}
       <section className="mx-auto max-w-5xl px-4 py-6">
         <h2 className="mb-4 text-xl font-semibold">Top Reads</h2>
@@ -189,7 +139,7 @@ export default function Blog() {
               <img
                 src={read.img}
                 alt={read.title}
-                className="h-24 w-24 rounded object-cover"
+                className="h-[150px] w-[150px] rounded object-cover"
               />
               <div className="flex-1">
                 <div className="text-sm font-bold text-gray-800">
@@ -216,7 +166,7 @@ export default function Blog() {
       </section>
 
       {/* Wellness Journey Banner */}
-      <section className="mx-auto mb-8 flex max-w-5xl flex-col items-center rounded-lg bg-white px-4 py-8 shadow md:flex-row">
+      <section className="mx-auto mb-8 flex max-w-5xl flex-col items-center rounded-lg bg-white px-4 py-4 shadow md:flex-row">
         <div className="flex-1">
           <h2 className="mb-2 text-xl font-semibold">
             Start your wellness journey today!
@@ -234,15 +184,15 @@ export default function Blog() {
         </div>
         <div className="flex flex-1 justify-center">
           <img
-            src="/blog/wellness-banner.jpg"
+            src="/blog/Homepage2.jpg"
             alt="Wellness"
-            className="h-32 w-32 rounded-lg object-cover"
+            className="h-100 w-full rounded-lg object-cover"
           />
         </div>
       </section>
 
       {/* Recent Posts */}
-      <section className="mx-auto max-w-5xl px-4 py-6">
+      <section className="mx-auto max-w-5xl px-4 py-6 pb-12">
         <h2 className="mb-4 text-xl font-semibold">Recent Posts</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
           {recentPosts.map((post, idx) => (
@@ -265,72 +215,6 @@ export default function Blog() {
           ))}
         </div>
       </section>
-
-      {/* Editorial Process & Footer */}
-      <section className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-4 py-8 md:flex-row">
-        <img
-          src="/blog/editorial.jpg"
-          alt="Editorial"
-          className="h-32 w-32 rounded-lg object-cover"
-        />
-        <div className="flex-1">
-          <h3 className="mb-2 text-lg font-bold">
-            Our Editorial Process for Reliable Content
-          </h3>
-          <ul className="list-disc pl-5 text-sm text-gray-700">
-            <li>
-              We provide healthy living among our readers through our content,
-              medically backed and methodically written.
-            </li>
-            <li>
-              The editorial team filters out the fluff in all the articles
-              keeping explicit health and transparency at their core.
-            </li>
-            <li>
-              The articles go to the round of trusted and experienced experts to
-              be scrutinized and updated with the most congruent information.
-            </li>
-            <li>
-              Another evaluative round of review is done before the content is
-              finally published for you.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <footer className="mt-8 bg-gray-100 py-8">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-8 px-4 md:flex-row">
-          <div>
-            <img
-              src="/blog/footer-logo.png"
-              alt="GreeNox"
-              className="mb-2 h-8"
-            />
-            <div className="text-xs text-gray-700">© 2025 GreeNox</div>
-          </div>
-          <div className="flex flex-1 flex-col gap-6 text-xs text-gray-700 md:flex-row">
-            <div>
-              <div className="mb-1">Download Our App</div>
-              <div className="flex gap-2">
-                <button className="rounded bg-gray-200 px-3 py-1">
-                  Download for iOS
-                </button>
-                <button className="rounded bg-gray-200 px-3 py-1">
-                  Download for Android
-                </button>
-              </div>
-            </div>
-            <div>
-              <div className="mb-1">Contact</div>
-              <div>support@greenox.com</div>
-            </div>
-            <div>
-              <div className="mb-1">Address</div>
-              <div>GreeNox HQ, Mumbai, India</div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
