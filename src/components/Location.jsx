@@ -83,8 +83,8 @@ const Location = () => {
   return (
     <div className="flex min-h-screen w-full flex-col bg-white md:flex-row">
       {/* Left: Select City */}
-      <div className="flex flex-col items-center justify-center bg-white p-8 md:w-1/3">
-        <div className="max-w-xm mb-8 w-full pb-4">
+      <div className="flex flex-col items-center justify-center bg-white p-8 pl-12 md:w-1/3">
+        <div className="max-w-xm mb-8 w-full pb-4 pl-12">
           <div className="relative">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
               <img src="/img/location.svg" alt="Location" className="h-5 w-5" />
@@ -118,7 +118,7 @@ const Location = () => {
         <img
           src="/img/mixedfruite.svg"
           alt="Veggies"
-          className="h-100 w-100 mt-4 object-contain"
+          className="h-100 w-100 mt-4 hidden object-contain md:block"
         />
       </div>
       {/* Right: Locations or Mascot */}
@@ -134,13 +134,13 @@ const Location = () => {
           <img
             src="/img/broccolimascots.svg"
             alt="Broccoli Mascots"
-            className="object-containpacity-90 pointer-events-none absolute bottom-0 right-0 z-0 h-full w-full"
+            className="pointer-events-none absolute bottom-0 right-0 z-0 hidden h-full w-full object-contain opacity-90 md:block"
           />
         )}
 
         {!selectedCity ? (
-          <div className="z-10 flex h-full w-full flex-col items-center justify-center">
-            {/* Speech bubble */}
+          <div className="z-10 hidden h-full w-full flex-col items-center justify-center md:flex">
+            {/* Speech bubble - hidden on small screens, visible md+ */}
             <div className="top_40px absolute left-8 top-8 z-20">
               <div className="relative rounded-lg border border-orange-300 bg-orange-100 px-6 py-4 text-lg font-medium text-gray-700 shadow">
                 Please select a city

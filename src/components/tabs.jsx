@@ -86,8 +86,9 @@ export default function Tabs() {
   } = tabData[activeTab].content;
 
   return (
+    // ensure base font-size is 1rem and layout stacks on mobile (tabs full-width)
     <section
-      className="relative w-full bg-white py-8"
+      className="relative w-full bg-white py-8 text-base" // text-base = 1rem
       id="target-section"
       style={{
         backgroundImage: "url('/img/tabg.svg')",
@@ -98,24 +99,30 @@ export default function Tabs() {
     >
       <div className="mx-auto flex max-w-screen-xl flex-col items-center gap-8 px-4 md:flex-row">
         {/* Left: Tabs and Content */}
-        <div className="flex-1">
-          {/* Tabs */}
-          <div className="mb-6 flex w-full justify-between">
-            {tabData.map((tab, idx) => (
-              <button
-                key={tab.label}
-                onClick={() => setActiveTab(idx)}
-                className={`relative pb-2 text-lg transition ${
-                  activeTab === idx
-                    ? "border-b-2 border-green-500 text-green-600"
-                    : "border-b-2 border-transparent text-gray-700 hover:text-green-500"
-                }`}
-                style={{ minWidth: "120px" }}
-              >
-                {tab.label}
-              </button>
-            ))}
+        <div className="w-full flex-1">
+          {/* Tabs - stacked on mobile (100% width each), row from sm/md up */}
+          <div className="mb-6 w-full">
+            <div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-start">
+              {tabData.map((tab, idx) => {
+                const active = activeTab === idx;
+                return (
+                  <button
+                    key={tab.label}
+                    onClick={() => setActiveTab(idx)}
+                    // full width on mobile, text-size 1rem (text-base)
+                    className={`w-full rounded px-3 py-2 text-left text-base transition sm:w-auto sm:text-center ${
+                      active
+                        ? "border-b-2 border-green-500 text-green-600"
+                        : "border-b-2 border-transparent text-gray-700 hover:text-green-500"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
+
           {/* Content */}
           <div className="bggreen mb-4 inline-block rounded-lg px-6 py-2 text-green-700">
             {title}
@@ -134,7 +141,7 @@ export default function Tabs() {
             </button>
           </div>
           {/* Features */}
-          <div className="mt-6 flex gap-8 pt-4">
+          <div className="mt-6 flex flex-wrap gap-8 pt-4">
             {features.map((f) => (
               <div
                 key={f.label}
@@ -148,7 +155,7 @@ export default function Tabs() {
           </div>
         </div>
         {/* Right: Image */}
-        <div className="flex flex-1 items-center justify-center">
+        <div className="flex w-full flex-1 items-center justify-center">
           <img
             src={img}
             alt={title}

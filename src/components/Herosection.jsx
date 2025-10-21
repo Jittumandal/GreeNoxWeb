@@ -32,7 +32,7 @@ export default function HeroSection() {
           <p className="animate__animated animate__fadeInRight mb-10 mt-12 text-black text-gray-600 md:text-4xl">
             Discover our range of nutritious and <br /> delicious products.
           </p>
-          <form className="animate__animated animate__zoomIn mb-4 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <form className="animate__animated animate__zoomIn mb-4 mt-10 flex w-full flex-col items-center justify-center gap-4 px-4 sm:flex-row sm:px-0">
             <input
               placeholder="Enter email or phone"
               className="rounded1xl w-full px-6 py-3 focus:outline-none sm:w-80"
@@ -40,7 +40,7 @@ export default function HeroSection() {
             />
             <button
               type="submit"
-              className="flex h-[55px] items-center justify-center bg-orange-400 px-8 font-semibold text-white transition hover:bg-orange-500"
+              className="flex h-[55px] w-full items-center justify-center bg-orange-400 px-8 font-semibold text-white transition hover:bg-orange-500 sm:w-auto"
               style={{
                 backgroundImage:
                   "linear-gradient(to right, #ffa500 60%, #48A470 100%)",

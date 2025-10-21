@@ -101,12 +101,6 @@ export default function Navigation() {
               <Link to="/blog" className="text-gray-700 hover:text-green-500">
                 Blog
               </Link>
-              {/* <Link
-                to="/contact"
-                className="text-gray-700 hover:text-green-500"
-              >
-                Contact
-              </Link> */}
             </div>
 
             <div className="flex items-center gap-4">
@@ -199,13 +193,7 @@ export default function Navigation() {
               >
                 Blog
               </Link>
-              <Link
-                to="/contact"
-                className="text-gray-700 hover:text-green-500"
-                onClick={() => setMenuOpen(false)}
-              >
-                Contact
-              </Link>
+
               <hr className="my-2 border-gray-200" />
               <button
                 className="mb-2 text-gray-700 hover:text-green-500"
