@@ -25,10 +25,16 @@ const Footer = () => {
             your craving without compromising on your holistic wellbeing.
           </p>
           <div className="mt-12 flex gap-5">
-            <a href="#" className="hover:text-green-400">
+            <a
+              href="https://www.facebook.com/officialgreenox"
+              className="hover:text-green-400"
+            >
               <FaFacebook size={32} className="bg-orange" />
             </a>
-            <a href="#" className="hover:text-green-400">
+            <a
+              href="https://www.instagram.com/officialgreenox/"
+              className="hover:text-green-400"
+            >
               <FaInstagram size={32} />
             </a>
             <a href="#" className="hover:text-green-400">
@@ -72,11 +78,7 @@ const Footer = () => {
                   Blog
                 </Link>
               </li>
-              <li>
-                <Link to="/contact" className="hover:text-white">
-                  Contact
-                </Link>
-              </li>
+
               <li>
                 <Link to="/delivery" className="hover:text-white">
                   Delivery
@@ -127,7 +129,10 @@ const Footer = () => {
           {/* Instagram */}
           <div>
             <div className="mb-2 font-semibold">Follow Us On Instagram</div>
-            <div className="grid grid-cols-2 gap-2">
+            <a
+              href="https://www.instagram.com/officialgreenox/"
+              className="grid grid-cols-2 gap-2"
+            >
               <img
                 src="/img/insta1.jpg"
                 alt="Insta1"
@@ -148,7 +153,7 @@ const Footer = () => {
                 alt="Insta4"
                 className="h-24 w-24 rounded-lg object-cover"
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>

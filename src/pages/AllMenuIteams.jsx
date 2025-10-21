@@ -4,51 +4,67 @@ import { Link } from "react-router-dom";
 const MENU = [
   {
     id: 1,
-    label: "Cheese Volcano BBQ Chicken",
+    label: "38 Barracks",
     img: "/menuimg/menu.avif",
-    price: 369,
-    tags: ["Spicy", "Signature"],
-    category: "Non-Veg GreeNox",
-    desc: "Centre loaded with Molten Cheese & topped with Pepper BBQ Chicken.",
-    isVeg: false,
+    price: 2000,
+    category: "North Indian",
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
+    rating: "4.5",
+    isPromoted: true,
+    discount: "Flat 15% OFF",
   },
   {
     id: 2,
     label: "Cheese Volcano Chicken Delight",
     img: "/menuimg/menu2.avif",
     price: 369,
-    tags: ["Popular"],
-    category: "Non-Veg GreeNox",
-    desc: "Molten Cheese & Golden Corn with Pepper BBQ Chicken.",
-    isVeg: false,
+    category: "North Indian",
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Vasundhara Sector 18, Ghaziabad",
+    distance: "1.5 km",
+    rating: "4.5",
+    isPromoted: true,
+    discount: "Flat 15% OFF",
   },
   {
     id: 3,
     label: "Cheese Volcano Double Chicken",
     img: "/menuimg/menu3.avif",
     price: 429,
-    tags: ["New"],
-    category: "Non-Veg GreeNox",
-    desc: "Extra chicken for bigger appetite.",
-    isVeg: false,
+    category: "North Indian",
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Complex Noida Sector 62, Noida",
+    distance: "1.5 km",
+    rating: "4.5",
+    isPromoted: true,
+    discount: "Flat 15% OFF",
   },
   {
     id: 4,
-    label: "Veggie Delight",
-    img: "/menuimg/menu4.avif",
-    price: 299,
-    tags: ["Veg", "Healthy"],
-    category: "Veg GreeNox",
-    desc: "Loaded with fresh veggies and oregano.",
+    label: "Classic Caesar Salad (Veg)",
+    img: "/menuimg/salad.avif",
+    price: 295,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
+    tags: [], // removed "Veg" and "Healthy" tags
+    category: "Salads",
+    desc: "", // removed "Loaded with fresh veggies and oregano."
     isVeg: true,
+    showBadge: false, // hide Veg badge for this item
   },
   {
     id: 5,
     label: "Crispy Chicken Burger",
     img: "/menuimg/menu5.avif",
     price: 199,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
     tags: ["Burgers"],
-    category: "Burgers",
+    category: "Wholesome Meal",
     desc: "Crispy chicken patty with lettuce & mayo.",
     isVeg: false,
   },
@@ -57,6 +73,9 @@ const MENU = [
     label: "Classic Fries",
     img: "/menuimg/menu6.avif",
     price: 99,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
     tags: ["Sides"],
     category: "Fries & Sides",
     desc: "Golden crunchy fries.",
@@ -67,6 +86,9 @@ const MENU = [
     label: "GreeNox Cappuccino",
     img: "/menuimg/menu7.avif",
     price: 129,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
     tags: ["Beverages"],
     category: "GreeNox® Coffees",
     desc: "Rich espresso with frothed milk.",
@@ -77,8 +99,143 @@ const MENU = [
     label: "McNuggets (6 pcs)",
     img: "/menuimg/menu8.avif",
     price: 159,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
     tags: ["Shareable"],
     category: "McNuggets® & McCrispy™ Strips",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu9.avif",
+    price: 159,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
+    tags: ["Shareable"],
+    category: "McNuggets® & McCrispy™ Strips",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu10.avif",
+    price: 159,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
+    tags: ["Shareable"],
+    category: "McNuggets® & McCrispy™ Strips",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu11.avif",
+    price: 159,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
+    tags: ["Sandwich"],
+    category: "McNuggets® & McCrispy™ Strips",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu12.avif",
+    price: 159,
+    cuisines: ["North Indian", "Biryani", "Chinese"],
+    location: "Shakti Khand 4, Indirapuram, Ghaziabad",
+    distance: "1.5 km",
+    tags: ["Shareable"],
+    category: "McNuggets® & McCrispy™ Strips",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu13.avif",
+    price: 159,
+    tags: ["Shareable"],
+    category: "McNuggets® & McCrispy™ Strips",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu14.avif",
+    price: 159,
+    tags: ["Shareable"],
+    category: "McNuggets® & McCrispy™ Strips",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu15.avif",
+    price: 159,
+    tags: ["Shareable"],
+    category: "Wholesome Meal",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu16.webp",
+    price: 159,
+    tags: ["Burrito Bowl"],
+    category: "Wholesome Meal",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu17.webp",
+    price: 159,
+    tags: ["Sub"],
+    category: "Burrito Bowl & McCrispy™ Strips",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu18.avif",
+    price: 159,
+    tags: ["Burrito Bowl"],
+    category: "Burrito Bowl",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu19.avif",
+    price: 159,
+    tags: ["Healthy Rice Bowls"],
+    category: "Burrito Bowl",
+    desc: "Tender chicken nuggets with dip.",
+    isVeg: false,
+  },
+  {
+    id: 8,
+    label: "McNuggets (6 pcs)",
+    img: "/menuimg/menu20.webp",
+    price: 159,
+    tags: ["Pasta (Durum Wheat)"],
+    category: "Burrito Bowl",
     desc: "Tender chicken nuggets with dip.",
     isVeg: false,
   },
@@ -86,23 +243,25 @@ const MENU = [
 
 const CATEGORIES = [
   "All",
-  "Non-Veg GreeNox",
-  "Veg GreeNox",
-  "Burgers",
-  "Fries & Sides",
-  "GreeNox® Coffees",
-  "McNuggets® & McCrispy™ Strips",
-  "Non-Veg GreeNox",
-  "Veg GreeNox",
-  "Burgers",
-  "Fries & Sides",
-  "GreeNox® Coffees",
-  "McNuggets® & McCrispy™ Strips",
-  "Non-Veg GreeNox",
-  "Veg GreeNox",
-  "Burgers",
-  "Fries & Sides",
-  "GreeNox® Coffees",
+  "North Indian",
+  "Salads",
+  "Wholesome Meal",
+  "Burrito Bowl",
+  "Sub",
+  "Wrap",
+  "Sandwich",
+  "Healthy Rice Bowls",
+  "Healthy Desserts Jar",
+  "Pasta (Durum Wheat)",
+  "Burger (Whole Wheat Goodness)",
+  "Medley Smoothie Bowl",
+  "Cold Coffee",
+  "Shake & Smoothies",
+  "Fresh Juice",
+  "Mocktails",
+  "Cookies",
+  "Greenox Gourmet",
+  "Gourmet Soups",
 ];
 
 export default function AllMenuIteams() {
@@ -121,8 +280,8 @@ export default function AllMenuIteams() {
   }, [activeCat, query]);
 
   return (
-    <div className="mt-12 min-h-screen bg-gray-50 px-4 py-8">
-      <div className="mx-auto mt-12 max-w-6xl">
+    <div className="mt-12 min-h-screen bg-gray-50 px-4 py-8 pt-12">
+      <div className="mx-auto mt-12 max-w-7xl px-4">
         {/* Header */}
         <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <h1 className="text-2xl font-semibold text-gray-800">Full Menu</h1>
@@ -153,16 +312,13 @@ export default function AllMenuIteams() {
                 <button
                   key={cat}
                   onClick={() => setActiveCat(cat)}
-                  className={`relative rounded-full px-4 py-2 text-sm font-medium transition ${
+                  className={`px-4 py-2 text-sm font-medium transition ${
                     active
-                      ? "bg-white text-green-600 shadow"
+                      ? "border-b-2 border-green-600 bg-white text-green-600 shadow"
                       : "bg-transparent text-gray-600 hover:text-green-600"
                   }`}
                 >
                   {cat}
-                  {active && (
-                    <span className="absolute -bottom-2 left-1/2 h-1 w-10 -translate-x-1/2 rounded bg-green-600" />
-                  )}
                 </button>
               );
             })}
@@ -174,54 +330,57 @@ export default function AllMenuIteams() {
           {filtered.map((item) => (
             <div
               key={item.id}
-              className="relative overflow-hidden rounded-xl bg-white shadow"
+              className="relative overflow-hidden rounded-xl p-4 transition-shadow hover:shadow-md"
             >
-              <img
-                src={item.img}
-                alt={item.label}
-                className="h-56 w-full object-cover transition-transform duration-500 hover:scale-105"
-              />
+              <div className="relative h-48">
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className="h-full w-full rounded-md object-cover"
+                />
 
-              {/* overlay gradient */}
-              <div className="absolute inset-0 flex flex-col justify-end">
-                <div className="bg-gradient-to-t from-black/75 via-black/30 to-transparent px-4 pb-4 pt-20 text-white">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <h3 className="text-lg font-semibold">{item.label}</h3>
-                      <p className="mt-1 line-clamp-2 text-xs text-gray-200">
-                        {item.desc}
-                      </p>
+                {item.isPromoted && (
+                  <div className="absolute left-3 top-3 rounded bg-black/70 px-2 py-1 text-xs font-semibold text-white">
+                    Promoted
+                  </div>
+                )}
 
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {item.tags.map((t) => (
-                          <span
-                            key={t}
-                            className="rounded-full bg-white/10 px-2 py-1 text-xs text-white"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                        <span
-                          className={`ml-2 inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${
-                            item.isVeg
-                              ? "bg-green-200 text-green-800"
-                              : "bg-red-200 text-red-800"
-                          }`}
-                        >
-                          {item.isVeg ? "Veg" : "Non-Veg"}
-                        </span>
-                      </div>
+                {item.discount && (
+                  <div className="absolute bottom-3 left-3">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-1.5 text-sm font-semibold text-white">
+                      {item.discount}
                     </div>
+                  </div>
+                )}
 
-                    <div className="flex flex-col items-end">
-                      <div className="text-lg font-bold">₹{item.price}</div>
-                      <Link
-                        to={`/menu/${item.id}`}
-                        className="mt-3 inline-flex items-center gap-2 rounded bg-pink-500 px-3 py-2 text-sm font-semibold text-white hover:bg-pink-600"
-                      >
-                        Add +
-                      </Link>
+                {item.rating && (
+                  <div className="absolute bottom-3 right-3">
+                    <div className="inline-flex items-center gap-1 rounded-full bg-white px-2 py-1 text-sm font-medium">
+                      <span className="text-green-700">{item.rating}</span>
+                      <span className="text-green-700">★</span>
                     </div>
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-2">
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {item.label}
+                </h3>
+                <div className="flex items-center justify-between">
+                  <div className="mt-1 text-sm text-gray-500">
+                    {item.cuisines?.join(", ")}
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm text-gray-500">
+                      ₹{item.price} <span>for two</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-2 flex items-center justify-between">
+                  <div className="text-sm text-gray-500">{item.location}</div>
+                  <div className="text-md text-black-400 mt-1 font-semibold">
+                    {item.distance}
                   </div>
                 </div>
               </div>

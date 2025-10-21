@@ -1,22 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import { IoIosHeart } from "react-icons/io";
+import { FaBookmark } from "react-icons/fa";
+import { AiOutlineShareAlt } from "react-icons/ai";
 import BlogBanner from "./BlogBanner";
 
-const latestStories = [
+export const latestStories = [
   {
-    title: "All About Whole Grains...and Why You Should Be Eating Them",
+    slug: "whole-grains-1",
+    title: "All About Whole Grains...",
     img: "/blog/proteensalad.jpg",
     author: "By GreeNox Diet",
+    date: "2025 NOV 18",
+    desc: "Everyone wants a job that offers flexibility, allows creativity, requires...",
+    full: "Full article content for All About Whole Grains...",
+    avatar: "/blog/avatar.svg",
   },
   {
-    title: "What are the Benefits of Eating Salads?",
+    slug: "whole-grains-2",
+    title: "What are the Benefits of Eating..",
     img: "/blog/proteensalad2.jpg",
     author: "By GreeNox Diet",
+    date: "2023 NOV 18",
+    desc: "Everyone wants a job that offers flexibility, allows creativity, requires...",
+    full: "Full article content for story 2...",
+    avatar: "/blog/avatar.svg",
   },
   {
-    title:
-      "Web Stories – Struggling To Lose Weight with PCOS? Here’s Effective Nutrition & Diet Tips",
+    slug: "whole-grains-3",
+    title: "All About Whole Grains... 3",
     img: "/blog/proteensalad3.jpg",
     author: "By GreeNox Diet",
+    date: "2023 NOV 18",
+    desc: "Everyone wants a job that offers flexibility, allows creativity, requires...",
+    full: "Full article content for story 3...",
+    avatar: "/blog/avatar.svg",
   },
 ];
 
@@ -93,7 +110,7 @@ export default function Blog() {
       {/* Hero Banner */}
       <BlogBanner />
 
-      {/* Search Bar */}
+      {/* Search Section */}
       <div className="mx-auto max-w-5xl px-4 py-6">
         <input
           type="search"
@@ -102,27 +119,56 @@ export default function Blog() {
         />
       </div>
 
-      {/* Latest Stories */}
+      {/* Latest Stories Section */}
       <section className="mx-auto max-w-5xl px-4 py-6">
         <h2 className="mb-4 text-xl font-semibold">Latest Stories</h2>
+
         <div className="flex gap-6 overflow-x-auto pb-2">
-          {latestStories.map((story, idx) => (
-            <div
-              key={idx}
-              className="min-w-[220px] max-w-xs rounded-lg bg-white shadow transition hover:shadow-lg"
+          {latestStories.map((story) => (
+            <a
+              key={story.slug}
+              href={`/blog/post/${story.slug}`}
+              rel="noopener noreferrer"
+              className="block min-w-[280px] max-w-xs"
             >
-              <img
-                src={story.img}
-                alt={story.title}
-                className="h-40 w-full rounded-t-lg object-cover"
-              />
-              <div className="p-4">
-                <div className="mb-2 text-sm font-semibold text-gray-800">
-                  {story.title}
+              <div className="rounded-lg border border-gray-100 bg-white shadow transition hover:shadow-lg">
+                <img
+                  src={story.img}
+                  alt={story.title}
+                  className="h-36 w-full rounded-t-lg object-cover"
+                />
+                <div className="p-4">
+                  <div className="mb-1 text-xs text-gray-400">{story.date}</div>
+                  <div className="mb-2 text-base font-bold text-gray-900">
+                    {story.title}
+                  </div>
+                  <div className="mb-2 line-clamp-2 text-sm text-gray-700">
+                    {story.desc}
+                  </div>
+                  <div className="mt-2 flex items-center gap-2">
+                    <img
+                      src={story.avatar}
+                      alt={story.author}
+                      className="h-6 w-6 rounded-full object-cover"
+                    />
+                    <span className="text-xs text-gray-600">
+                      {story.author}
+                    </span>
+                    {/* Example icons */}
+                    <button className="ml-auto text-red-400 hover:text-red-500">
+                      <IoIosHeart size={22} />
+                    </button>
+
+                    <button className="text-green-400 hover:text-purple-500">
+                      <FaBookmark size={18} />
+                    </button>
+                    <button className="text-blue-400 hover:text-yellow-500">
+                      <AiOutlineShareAlt size={22} />
+                    </button>
+                  </div>
                 </div>
-                <div className="text-xs text-gray-500">{story.author}</div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -215,6 +261,11 @@ export default function Blog() {
           ))}
         </div>
       </section>
+
+      {/* Render nested route content here */}
+      <div className="mx-auto max-w-5xl px-4">
+        <Outlet />
+      </div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Subscription from "../Subscription/Subscription";
 import Contact from "../Contact/Contact";
 import Menu from "../Menu/Menu";
 import Blog from "../Blog/Blog";
+import BlogPost from "../pages/BlogPost";
 import Subcriptiondestails from "../pages/Subcriptiondestails";
 import AllMenuIteams from "../pages/AllMenuIteams";
 
@@ -19,6 +20,8 @@ export default function AppRoutes() {
       <Route path="/subscription" element={<Subscription />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/post/:slug" element={<BlogPost />} />{" "}
+      {/* Separate route for posts */}
       <Route path="/subcriptiondestails" element={<Subcriptiondestails />} />
       <Route path="/allmenuiteams" element={<AllMenuIteams />} />
     </Routes>

@@ -17,6 +17,10 @@ body {
     background-color: #F7F7F7;
 }
 
+header {
+    box-shadow: 0 2px 8px #0000001a !important;
+}
+
 .bggreen {
     background-color: #48A470;
     color: #fff;
@@ -128,4 +132,9 @@ body {
 .blog_banner {
     padding-left: 150px;
     padding-top: 75px;
+}
+
+.blog_list li {
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
 }
