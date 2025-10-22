@@ -78,7 +78,8 @@ const cityLocations = {
 const cities = Object.keys(cityLocations);
 
 const Location = () => {
-  const [selectedCity, setSelectedCity] = useState("");
+  // Change the initial state to "Uttar Pradesh"
+  const [selectedCity, setSelectedCity] = useState("Uttar Pradesh");
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-white md:flex-row">

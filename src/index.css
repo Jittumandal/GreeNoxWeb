@@ -138,3 +138,19 @@ header {
     margin-bottom: 1rem;
     line-height: 1.75rem;
 }
+
+.ourhistory {
+    margin-right: 150px;
+}
+
+.top_30px {
+    margin-top: 250px;
+}
+
+.our_history_section {}
+
+.leaf {
+    width: 24%;
+    left: -130px;
+    height: 100%;
+}
