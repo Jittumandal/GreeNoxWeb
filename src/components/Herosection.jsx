@@ -40,21 +40,22 @@ export default function HeroSection() {
             />
             <button
               type="submit"
-              className="flex h-[55px] w-full items-center justify-center bg-orange-400 px-8 font-semibold text-white transition hover:bg-orange-500 sm:w-auto"
-              style={{
-                backgroundImage:
-                  "linear-gradient(to right, #ffa500 60%, #48A470 100%)",
-                backgroundPosition: "right",
-                backgroundSize: "200% 100%",
-                transition: "background-position 0.5s",
-                borderRadius: "5px",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundPosition = "left")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundPosition = "right")
-              }
+              className="rounded1xl flex h-[55px] w-full items-center justify-center bg-orange-400 px-8 font-semibold text-white transition hover:bg-orange-500 sm:w-auto"
+              //   style={{
+              //     backgroundImage:
+              //       "linear-gradient(to right, #ffa500 60%, #48A470 100%)",
+              //     backgroundPosition: "right",
+              //     backgroundSize: "200% 100%",
+              //     transition: "background-position 0.5s",
+              //     borderRadius: "5px",
+              //   }}
+              //   onMouseEnter={(e) =>
+              //     (e.currentTarget.style.backgroundPosition = "left")
+              //   }
+              //   onMouseLeave={(e) =>
+              //     (e.currentTarget.style.backgroundPosition = "right")
+              //   }
+              // >
             >
               GET START NOW
             </button>
