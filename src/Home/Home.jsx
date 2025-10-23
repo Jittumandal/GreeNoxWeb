@@ -7,6 +7,7 @@ import { PopularMenu } from "../components/PopularMenu.jsx";
 import FoodMenu from "../components/FoodMenu.jsx"; // Import the new component
 import { OurHistory } from "../components/OurHistory.jsx";
 import BiggestBrands from "../components/Bigestbarand.jsx";
+import Testimonials from "../components/Testimonials.jsx";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <OurHistory />
       <BiggestBrands />
       <Location />
+      <Testimonials />
     </>
   );
 };

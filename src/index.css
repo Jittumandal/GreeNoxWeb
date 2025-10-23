@@ -154,3 +154,53 @@ header {
     left: -130px;
     height: 100%;
 }
+
+/*=================slider css===================*/
+.Marquee {
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.Marquee-content {
+    display: flex;
+    flex-direction: column;
+    animation: marquee-vertical 10s linear infinite;
+    height: max-content;
+}
+
+.Marquee:hover .Marquee-content {
+    animation-play-state: paused;
+}
+
+.Marquee-content>div,
+.Marquee-content>.Marquee-tag {
+    transition: background 0.3s;
+}
+
+.Marquee-content>div:hover,
+.Marquee-content>.Marquee-tag:hover {
+    background: #e0f7fa;
+    /* Change to your desired hover color */
+}
+
+@keyframes marquee-vertical {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/*=================end slider css===================*/
+
+
+
+.testimonial-item:hover {
+    background: #22c55e !important;
+    transition: background 0.3s;
+    color: #fff !important;
+}
